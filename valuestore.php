@@ -1,9 +1,10 @@
 <?php
 
 /*
- * Super-simple plain-file-based
- * RESTful key-value store that
- * Only talks JSON in utf8
+ * Confusional's
+ *
+ * Super-simple plain-file-based RESTful
+ * key-value store for JSON objects.
  *
  */
 
@@ -115,7 +116,7 @@ function handlePUT($key) {
   $data = trim($_REQUEST['value']);
   if (false === file_put_contents(DIR . '/' . $key, $data))
     throw new ServerException();
-  header('HTTP/1.1 200 Created');
+  header('HTTP/1.1 200 OK');
 }
 
 /*

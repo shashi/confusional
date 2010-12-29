@@ -3,7 +3,7 @@
 
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<title>Nonameconf app!</title>
+		<title>Confusional &mdash; dashboard</title>
 
 		<link rel="stylesheet" href="css/table.css" type="text/css" media="screen" charset="utf-8">
 
@@ -27,7 +27,7 @@
   </head>
 
   <body>
-    <h1>Nonameconfap!</h1>
+    <h1>Confusional &mdash; the super-easy conference planner</h1>
 
     <ul class="tabselect">
       <li><a href="#/tab/planner" class="selected">Planner</a></li>
@@ -41,7 +41,7 @@
       </form>
 
       <form action="#/timeline/epoch"  class="planner-form" method="PUT">
-        <input type="text" id="date" name="date" placeholder="Set the date for the event" />
+        <input type="text" id="date" name="date" placeholder="Set the date for the confernece" />
       </form>
 
       <div id="table-wrap">
@@ -63,9 +63,10 @@
           <input type="submit" value="Load" />
         </form>
       </div>
-        All fields are editable, Go to "Settings" to configure them. Clicking on "Save" saves the current view in the database.
-        All items can be moved freely inside and across tracks.
-        When you are editing an item:
+        All fields are editable, Go to "Settings" to configure them.
+        Clicking on "Save" saves the current view on the server while "Load" loads the last saved view.
+        All items can be resized and moved freely even across different tracks.
+        When you are editing an item (currently works only in Chrome):
         <dl>
           <dt>ctrl+enter</dt>
           <dd>Jumps to the next item in the track, creates one if it does not exist</dd>
@@ -76,7 +77,7 @@
           <dt>ctrl+down</dt>
           <dd>Increases the height (hence duration) of the item</dd>
           <dt>tab</dt>
-          <dd>Edit the next field</dd>
+          <dd>Starts editing the next field</dd>
         </dl>
       </div>
     </div>
