@@ -20,7 +20,7 @@ existing application.
   stores key-value pairs and returns the value associated with a
   requested key. Your key-value store should also take care of
   authenticating users for write access etc.
-* Edit index.html to suit your design etc.
+* Edit index.html and css/nonameskin.css to suit your design etc.
 
 TODO
 ----
@@ -29,5 +29,4 @@ TODO
 * Use parent cms to list accepted / top rated talks
 * Allow multiple instances of Planner on the same page
   (multiple dates)
-* Seperate out metrics to a different stylesheet
 * Write a drupal plugin

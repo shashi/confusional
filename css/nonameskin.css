@@ -1,0 +1,140 @@
+html {
+	font-family: sans, georgia;
+}
+
+h1 {
+  font-family: palatino;
+  font-style: italic;
+  font-weight: normal;
+}
+
+body {
+	background: #ccbb99;
+	color: #555533;
+}
+
+.tabselect li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tabselect li a.selected,
+.tabselect li a:hover,
+.tabselect li a:active {
+  background: #443333;
+  color: #ccbb99;
+}
+
+a {
+	color: #443333;
+}
+
+a:hover, a:visited {
+	color: #555533;
+}
+
+.item {
+  color: #ffeedd;
+  background: #6699bb;
+  border-color: black;
+}
+
+.icon {
+	background-image: url(../images/ui-icons_2e83ff_256x240.png);
+	background-color: white;
+}
+
+.ui-datepicker, .tabselect li a, .icon,
+.item, input, textarea, #notification {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+}
+
+.deltrack {
+  border-color: #555533;
+}
+
+#template {
+  font-family: monospace;
+}
+
+#newtrack, #date {
+  background: white;
+  border: 2px #bbaa88 solid;
+}
+
+#timeline {
+  background: #bbaa88;
+}
+
+#timeline #epoch input {
+  background: #ccbb99;
+  color: #555533;
+  border: 1px #bbaa88 solid;
+}
+
+#timeline form {
+  border-color: #555533;
+}
+
+#timeline .step {
+	border-color: #555533;
+}
+
+#planner-instructions {
+  border-color: #777744;
+}
+
+textarea {
+  border: 2px solid #bbaa88;
+}
+
+input[type=submit] {
+  color: #ccbb99;
+  background: #443333;
+  font-weight: bold;
+  height: 25px;
+  font-size: 16px;
+  background: -moz-linear-gradient(
+    top, #575533 0%, #665555 50%, #443333 100%); /* firefox */
+  background: -webkit-gradient(
+    linear, left top, left bottom, color-stop(
+      0%,#575533), color-stop(50%,#665555
+    ), color-stop(100%,#443333)); /* webkit */
+  border:0;
+}
+
+input[type=submit]:hover, input[type=submit]:active {
+  background: -moz-linear-gradient(
+    top, #443333 0%, #665555 50%, #575533 100%); /* firefox */
+  background: -webkit-gradient(
+    linear, left top, left bottom, color-stop(0%,#443333),
+    color-stop(50%,#665555), color-stop(100%,#575533)); /* webkit */
+}
+
+#notification {
+  background: #bbaa88;
+}
+
+#notification.success {
+  color: #555533;
+}
+
+#notification.error {
+  color: #C35817;
+}
+
+.ui-resizable-s {
+  background-image: -webkit-gradient(
+    linear, left top, left bottom, from(rgba(102, 153, 187,0.0)),
+    to(rgba(102, 153, 187,0.9))
+  );
+  background-image: -moz-linear-gradient(
+    rgba(102, 153, 187, 0.0) 0%, rrgba(102, 153, 187, 0.8) 100%
+  );
+}
+
+/* datepicker */
+.ui-datepicker { background-color: white}
