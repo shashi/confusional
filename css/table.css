@@ -191,6 +191,7 @@ h2  {
 }
 
 #planner-instructions {
+	display: none;
   font-size: small;
   margin-top: 10px;
   text-align: justify;
@@ -200,7 +201,6 @@ h2  {
 }
 
 #planner-instructions form {
-  display: none;
   position: absolute;
   top: 10px;
   left: 10px;

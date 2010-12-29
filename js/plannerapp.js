@@ -279,7 +279,7 @@
       }
     });
 
-    $('#timeline').add('#planner-instructions form').fadeIn();
+    $('#timeline').add('#planner-instructions').fadeIn();
 
     Planner.adjustTrackWidth();
     return track;
