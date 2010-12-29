@@ -37,7 +37,7 @@
       data: { key: key },
       cache: false,
       success: function(data, status, xhr) {
-        if(typeof(callback_success) != 'undefined')
+        if (data && typeof(callback_success) != 'undefined')
           callback_success(data);
       },
       error: function(data, status, thro) {
@@ -97,9 +97,7 @@
       var t =  new Date(obj[0].events[0].start);
       console.log(t);
       Planner.setEpoch(t);
-    } catch(er) {
-      alert("Could not set start time. Please set one yourself");
-    }
+    } catch(er) { }
 
     $('.track-wrap').remove();
 
