@@ -1,0 +1,307 @@
+html {
+	font-family: sans, georgia;
+	font-size: 15px;
+}
+
+h1 {
+  font-family: palatino;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 200%;
+}
+
+body {
+	background: #ccbb99;
+	width: 960px;
+  margin: 0 32px;
+	color: #555533;
+}
+
+ul.tabselect {
+  padding: 0;
+}
+
+.tabselect li {
+  display: inline;
+  list-style: none;
+  margin: 0 2px;
+}
+
+.tabselect li a {
+  padding: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tabselect li a.selected,
+.tabselect li a:hover,
+.tabselect li a:active {
+  background: #443333;
+  color: #ccbb99;
+}
+
+a {
+	color: #443333;
+}
+
+a:hover, a:visited {
+	color: #555533;
+}
+
+#planner ul li {
+	list-style: none;
+}
+
+#planner .track {
+  padding: 0;
+}
+
+.item {
+  position: relative;
+  vertical-align: middle;
+  min-height: 11px;
+  color: #ffeedd;
+  padding:4px 12px;
+  background: #6699bb;
+  overflow: hidden;
+  height: 81px;
+  margin: 0px;
+  border-bottom: 1px solid black;
+}
+
+#table-wrap {
+  clear: both;
+}
+
+body div.tab {
+  display: none;
+}
+
+div#planner {
+  display: block;
+}
+
+.icon {
+  position: absolute;
+  top:2px;
+  display: none;
+	height: 12px;
+  background: white;
+  margin:2px;
+	width: 14px;
+	z-index:1000;
+	background-image: url(../images/ui-icons_2e83ff_256x240.png);
+}
+
+.sort-handle {
+  right:20px;
+	background-position: 0 158px;
+}
+
+.close {
+  right:2px;
+	background-position: 175px 110px;
+}
+
+.ui-datepicker, .tabselect li a, .icon,
+.item, input, textarea, #notification {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+}
+
+h2  {
+  margin: 0;
+}
+
+.newitem, .deltrack {
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.deltrack {
+  border-right: 1px #555533 solid;
+}
+
+.track-wrap {
+  margin-left:4px;
+  float: left;
+}
+.duration {
+  position: absolute;
+  bottom: 0;
+  right: 2px;
+  font-size: 10px;
+	height: 12px;
+  margin:2px;
+  z-index: 998;
+}
+
+#template {
+  width: 100%;
+  height: 80px;
+  font-family: monospace;
+}
+
+#newtrack, #date {
+  width: 475px;
+  background: white;
+  font-size: 15px;
+  height: 20px;
+  border: 2px #bbaa88 solid;
+	margin-bottom: 10px;
+}
+
+.planner-form {
+  float: right;
+}
+
+.track-head {
+  height: 45px;
+}
+
+#timeline {
+  padding: 0 4px;
+  overflow: hidden;
+  float: left;
+  width: 52px;
+  display: none;
+  background: #bbaa88;
+}
+
+#timeline #epoch input {
+  background: #ccbb99;
+  color: #555533;
+  border: 1px #bbaa88 solid;
+  width: 52px;
+}
+
+#timeline form {
+  margin:0;
+  margin-top: 59px;
+  text-align: center;
+  border-top: 1px #555533 solid;
+}
+
+#timeline .step {
+	border-top: 1px #555533 solid;
+	font-size: 11px;
+	text-align: center;
+}
+
+#planner-instructions {
+  font-size: small;
+  margin-top: 10px;
+  text-align: justify;
+  border-top: 1px #777744 solid;
+  padding: 10px 64px 10px 84px;
+  position: relative;
+}
+
+#planner-instructions form {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#planner .loadform {
+  top: 50px;
+}
+
+#planner-instructions dt, #planner-instructions dd {
+  display: inline;
+  margin: 0;
+}
+
+#planner-instructions dt {
+  font-weight: bold;
+}
+
+label {
+  font-weight: bold;
+  float: right;
+}
+
+.instruction {
+  font-size: 80%;
+  margin: 1px 20px;
+}
+
+textarea {
+  border: 2px solid #bbaa88;
+}
+
+input[type=submit] {
+  color: #ccbb99;
+  background: #443333;
+  font-weight: bold;
+  height: 25px;
+  font-size: 16px;
+  background: -moz-linear-gradient(top, #575533 0%, #665555 50%, #443333 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#575533), color-stop(50%,#665555), color-stop(100%,#443333)); /* webkit */
+  border:0;
+}
+
+input[type=submit]:hover, input[type=submit]:active {
+  background: -moz-linear-gradient(top, #443333 0%, #665555 50%, #575533 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#443333), color-stop(50%,#665555), color-stop(100%,#575533)); /* webkit */
+}
+
+#notification {
+  display: none;
+  height: 20px;
+  padding: 10px;
+  font-weight:bold;
+  text-align: center;
+  width: 300px;
+  position: absolute;
+  background: #bbaa88;
+  top: -3px;
+  left:362px;
+}
+
+#notification.success {
+  color: #555533;
+}
+
+#notification.error {
+  color: #C35817;
+}
+
+/* resizable */
+.ui-resizable {
+  /* http://www.barelyfitz.com/screencast/html-training/css/positioning/ step 4 */
+  position:relative;
+}
+
+.ui-resizable-s {
+  position: absolute;
+  cursor: s-resize;
+  height: 7px;
+  width: 100%; 
+  left: 0; 
+  bottom:0;
+  z-index:999;
+  background-image: -webkit-gradient(
+    linear, left top, left bottom, from(rgba(102, 153, 187,0.0)),
+    to(rgba(102, 153, 187,0.9))
+  );
+  background-image: -moz-linear-gradient(
+    rgba(102, 153, 187, 0.0) 0%, rrgba(102, 153, 187, 0.8) 100%
+  );
+}
+
+/* datepicker */
+.ui-datepicker { width: 17em; padding: .2em 1.3em 0; display: none; background: white}
+.ui-datepicker .ui-datepicker-header { position:relative; padding:.2em 0; }
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position:absolute; top: .5em; width: 1.8em; height: 1.8em; cursor: pointer }
+.ui-datepicker .ui-datepicker-prev { left:2px;  }
+.ui-datepicker .ui-datepicker-next { right:2px; }
+.ui-datepicker .ui-datepicker-title { margin: 0 2.3em; line-height: 1.8em; text-align: center; }
+.ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:0 0 .4em; }
+.ui-datepicker th { padding: .7em .3em; text-align: center; font-weight: bold; border: 0;  }
+.ui-datepicker td { border: 0; padding: 1px; }
+.ui-datepicker td span, .ui-datepicker td a { display: block; padding: .2em; text-align: right; text-decoration: none; }
+

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>Nonameconf app!</title>
+
+		<link rel="stylesheet" href="css/table.css" type="text/css" media="screen" charset="utf-8">
+
+    <script type="text/javascript" src="js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/sammy.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/jquery.ba-resize.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/jquery.timeentry.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="js/sammy_app.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/plannerapp.js" charset="utf-8"></script>
+
+    <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      Planner.init({
+        valueStore: 'valuestore.php',
+        prefix: 'test' // prefix used for keys
+      });
+    });
+    </script>
+  </head>
+
+  <body>
+    <h1>Nonameconfap!</h1>
+
+    <ul class="tabselect">
+      <li><a href="#/tab/planner" class="selected">Planner</a></li>
+      <li><a href="#/tab/config">Settings</a></li>
+      <li><a href="#/tab/export">Export</a></li>
+    </ul>
+
+    <div id="planner" class="tab">
+      <form action="#/track/new" class="planner-form" method="POST">
+        <input type="text" id="newtrack" name="track" placeholder="Start editing a new track" />
+      </form>
+
+      <form action="#/timeline/epoch"  class="planner-form" method="PUT">
+        <input type="text" id="date" name="date" placeholder="Set the date for the event" />
+      </form>
+
+      <div id="table-wrap">
+        <div id="table">
+          <div id="timeline">
+            <form id="epoch" action="#/timeline/epoch" method="PUT">
+              <input type="text" name="epoch" value="09:00am" />
+            </form>
+          </div>
+        </div>
+        <div style="clear:both"></div>
+      </div>
+      <div id="planner-instructions">
+      <div class="saveform">
+        <form action="#/planner/save" method="POST">
+          <input type="submit" value="Save" />
+        </form>
+        <form action="#/planner/load" class="loadform" method="POST">
+          <input type="submit" value="Load" />
+        </form>
+      </div>
+        All fields are editable, Go to "Settings" to configure them. Clicking on "Save" saves the current view in the database.
+        All items can be moved freely inside and across tracks.
+        When you are editing an item:
+        <dl>
+          <dt>ctrl+enter</dt>
+          <dd>Jumps to the next item in the track, creates one if it does not exist</dd>
+          <dt>ctrl+shift+enter</dt>
+          <dd>Jumps to the previous item in the track</dd>
+          <dt>ctrl+up</dt>
+          <dd>Decreases the height (hence duration) of the item</dd>
+          <dt>ctrl+down</dt>
+          <dd>Increases the height (hence duration) of the item</dd>
+          <dt>tab</dt>
+          <dd>Edit the next field</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div id="config" class="tab">
+    <form id="config-form" action="#/config" method="PUT">
+      <label>Template</label>
+
+      <!-- pardon the bad indentation -->
+      <textarea id="template" name="template" class="config-template">
+<strong data-rel="title" class="summary field">Example Talk</strong><br/>
+<span data-rel="speaker" class="field host">John Doe</span> <span data-rel="email" class="field">john@example.com</span>
+<div data-rel="tags" class="field">tagone tagtwo</div>
+</textarea>
+
+      <p class="instruction">
+        <code>class="field"</code> makes any element editable, <code>data-rel</code> is the name of the field used in exporting and importing.
+      </p><br/>
+      <input type="submit" value="Save" />
+    </form>
+    </div>
+
+    <div id="export" class="tab">
+      <form action="#/export" method="GET">
+				<input type="radio" name="format" value="csv">CSV</input>
+				<input type="radio" name="format" value="json">JSON</input>
+				<input type="radio" name="format" value="html">HTML</input>
+
+        <input type="submit" value="Export &rarr;" />
+      </form>
+    </div>
+		<div id="notification"></div>
+  </body>
+
+</html>
